@@ -673,12 +673,6 @@ spawn(function()
 work(game:GetService("Players")[v])
 end)
 end
-game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(state)
-if state == Enum.TeleportState.Started then
-game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
-end
-end)
-
 end)
 
 faceless.MouseButton1Click:Connect(function()
