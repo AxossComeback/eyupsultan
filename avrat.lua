@@ -669,7 +669,6 @@ for i,c in pairs(game.Lightning:GetChildren()) do
 end
 for i,c in pairs(game.Workspace:GetChildren()) do
     all = c
-    if c ~= "SpawnLocation" then
         work(all)
 end
 for i,v in pairs(GetPlayer(player.Text)) do
