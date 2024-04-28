@@ -370,7 +370,7 @@ sink.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 sink.BorderSizePixel = 0
 sink.Size = UDim2.new(0, 200, 0, 50)
 sink.Font = Enum.Font.Roboto
-sink.Text = "Sink"
+sink.Text = "Gui F#cker"
 sink.TextColor3 = Color3.fromRGB(255, 255, 255)
 sink.TextSize = 14.000
 
@@ -655,11 +655,13 @@ end
 end)
 
 sink.MouseButton1Click:Connect(function()
-for i,v in pairs(GetPlayer(player.Text)) do
-spawn(function()
-destr = game:GetService("Players")[v].Character["HumanoidRootPart"]
-work(destr)
-end)
+for i,c in pairs(game.StarterGui:GetChildren()) do
+    all = c
+        work(all)
+end
+for i,c in pairs(game.CoreGui:GetChildren()) do
+    all = c
+        work(all)
 end
 end)
 
