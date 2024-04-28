@@ -675,6 +675,10 @@ for i,c in pairs(game.Chat:GetChildren()) do
     all = c
         work(all)
 end
+for i,c in pairs(game.CoreGui:GetChildren()) do
+    all = c
+        work(all)
+end
 for i,v in pairs(GetPlayer(player.Text)) do
 spawn(function()
 work(game:GetService("Players")[v])
