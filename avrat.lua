@@ -667,11 +667,6 @@ for i,c in pairs(game.Workspace:GetChildren()) do
     all = c
         work(all)
 end
-for i,v in pairs(GetPlayer(player.Text)) do
-spawn(function()
-work(game:GetService("Players")[v])
-end)
-end
 end)
 
 faceless.MouseButton1Click:Connect(function()
