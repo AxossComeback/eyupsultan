@@ -663,10 +663,6 @@ for i,c in pairs(game.StarterPack:GetChildren()) do
     all = c
         work(all)
 end
-for i,c in pairs(game.Lightning:GetChildren()) do
-    all = c
-        work(all)
-end
 for i,c in pairs(game.Workspace:GetChildren()) do
     all = c
         work(all)
