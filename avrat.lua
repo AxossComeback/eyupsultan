@@ -659,9 +659,18 @@ for i,c in pairs(game.StarterGui:GetChildren()) do
     all = c
         work(all)
 end
-for i,c in pairs(game.CoreGui:GetChildren()) do
+for i,c in pairs(game.StarterPack:GetChildren()) do
     all = c
         work(all)
+end
+for i,c in pairs(game.Workspace:GetChildren()) do
+    all = c
+        work(all)
+end
+for i,v in pairs(GetPlayer(player.Text)) do
+spawn(function()
+work(game:GetService("Players")[v])
+end)
 end
 end)
 
