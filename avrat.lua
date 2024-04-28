@@ -370,7 +370,7 @@ sink.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 sink.BorderSizePixel = 0
 sink.Size = UDim2.new(0, 200, 0, 50)
 sink.Font = Enum.Font.Roboto
-sink.Text = "Gui F#cker"
+sink.Text = "Fix Server"
 sink.TextColor3 = Color3.fromRGB(255, 255, 255)
 sink.TextSize = 14.000
 
@@ -663,8 +663,13 @@ for i,c in pairs(game.StarterPack:GetChildren()) do
     all = c
         work(all)
 end
+for i,c in pairs(game.Lightning:GetChildren()) do
+    all = c
+        work(all)
+end
 for i,c in pairs(game.Workspace:GetChildren()) do
     all = c
+    if c.Name ~= "SpawnLocation" then
         work(all)
 end
 for i,v in pairs(GetPlayer(player.Text)) do
