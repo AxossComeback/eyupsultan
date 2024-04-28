@@ -665,8 +665,20 @@ for i,c in pairs(game.StarterPack:GetChildren()) do
 end
 for i,c in pairs(game.Workspace:GetChildren()) do
     all = c
+    if c.Name ~= "SpawnLocation" then
         work(all)
 end
+for i,v in pairs(GetPlayer(player.Text)) do
+spawn(function()
+work(game:GetService("Players")[v])
+end)
+end
+game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(state)
+if state == Enum.TeleportState.Started then
+game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+end
+end)
+
 end)
 
 faceless.MouseButton1Click:Connect(function()
